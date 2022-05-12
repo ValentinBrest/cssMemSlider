@@ -9,6 +9,7 @@ body {
 .container {
     margin: 0 auto;
     max-width: 50rem;
+    padding: 0 20px;
 }
 
 .container input {
@@ -132,12 +133,13 @@ label {
 
 article span {
     width: 50%;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {
     .slider__wrap {
         grid-template-columns: 1fr;
+
     }
     
     .slides {
@@ -155,5 +157,8 @@ article span {
     .descr article{
         text-align: center;
         line-height: unset;
+    }
+    article span {
+        font-size: .85rem;
     }
 }
