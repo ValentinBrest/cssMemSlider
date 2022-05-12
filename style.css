@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+
+body {
+    font-family: 'Macondo', cursive;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 50rem;
+}
+
+.container input {
+    display: none;
+}
+
+.title {
+    font-size: 3em;
+    text-align: center;
+}
+
+.slider__wrap {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    row-gap: 1rem;
+}
+
+.slides {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.slides .image {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.slides article{
+    width: 25%;
+}
+
+.overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+article img {
+    width: 100%;
+}
+
+label {
+    cursor: pointer;
+}
+
+
+#switch1:checked ~ .slides .image,
+#switch1:checked ~ .descr .text {
+    margin-left: 0;
+}
+#switch2:checked ~ .slides .image,
+#switch2:checked ~ .descr .text {
+    margin-left: -100%;
+}
+#switch3:checked ~ .slides .image,
+#switch3:checked ~ .descr .text {
+    margin-left: -200%;
+}
+#switch4:checked ~ .slides .image,
+#switch4:checked ~ .descr .text {
+    margin-left: -300%;
+}
+
+.active {
+    grid-column: 2/3;
+    text-align: center;
+}
+.active label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    transition: all .3s;
+    margin: 10px;
+    padding: 10px;
+}
+
+.active label .dot {
+    border-radius: 50px;
+    background: #bbb;
+    width: 100%;
+    height: 100%;
+}
+
+.active label:hover .dot{
+    background: #76c8ff;
+    border-color: #777 !important
+}
+
+#switch1:checked ~ .active label:nth-child(1) .dot,
+#switch2:checked ~ .active label:nth-child(2) .dot,
+#switch3:checked ~ .active label:nth-child(3) .dot,
+#switch4:checked ~ .active label:nth-child(4) .dot{
+	background:#18a3dd;
+	border-color:#18a3dd !important;
+}
+.slides .image,
+.descr .text{
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+.descr {
+    grid-row: 2/3;
+}
+
+.descr article{
+    width: 25%;
+    line-height: 4em;
+}
+
+.descr .text {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    justify-content: center;
+}
+
+article span {
+    width: 50%;
+}
