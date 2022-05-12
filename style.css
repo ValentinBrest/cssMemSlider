@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Macondo', cursive;
+    background: rgb(220, 220, 220);
 }
 
 .container {
@@ -48,6 +49,8 @@ body {
 
 article img {
     width: 100%;
+    border-radius: 20px;
+    display: block;
 }
 
 label {
@@ -129,7 +132,7 @@ label {
 
 article span {
     width: 50%;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 @media (max-width: 768px) {
