@@ -132,3 +132,25 @@ article span {
     font-size: 25px;
 }
 
+@media (max-width: 768px) {
+    .slider__wrap {
+        grid-template-columns: 1fr;
+    }
+    
+    .slides {
+        grid-column: 1/2;
+    }
+
+    .active {
+        grid-column: unset;
+    }
+
+    .descr {
+        grid-row: 3/4;
+    }
+
+    .descr article{
+        text-align: center;
+        line-height: unset;
+    }
+}
