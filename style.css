@@ -96,6 +96,10 @@ label {
     height: 100%;
 }
 
+.active label:active .dot {
+    background: rgb(255, 255, 255) !important;
+}
+
 .active label:hover .dot{
     background: #76c8ff;
     border-color: #777 !important
